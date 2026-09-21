@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args){
 
@@ -14,6 +16,15 @@ public class Main {
         // set size of 2D array
         setSize size = new setSize();
         size.setArray();
+
+        // Array and ArrayList
+        arrLists obj = new arrLists(20, "John");
+        obj.tools.add("Hammer");
+        obj.tools.add("Screwdriver");   
+
+        obj.shoeDetails();
+
+
 
 
     }
@@ -73,5 +84,53 @@ class setSize{
         System.out.println("Print elements: " + num[0][0]);
 
     }
+
+}
+
+
+// Array and ArrayList
+class arrLists{
+    private int age;
+    private String name;
+
+    // array attribute
+    int[] arr = {1, 2, 8, 6, 4}; // array
+
+    // collection attrinute
+    ArrayList<String> tools = new ArrayList<String>();
+
+    // constructor
+    public arrLists(int age, String name){
+        this.age = age;
+        this.name = name;
+
+    }
+
+    // method to set array values
+    public void shoeDetails(){
+        System.out.println("Age: " + age);
+        System.out.println("Name: " + name);
+
+
+        // for Array
+        System.out.println("Array values:");
+        for(int num : arr){
+            System.out.println(num);
+
+        }
+
+        // for ArrayList
+        System.out.println("ArrayList values:");
+        for(String tool : tools){
+            System.out.println(tool);
+
+        }
+
+    }
+
+
+
+
+
 
 }
