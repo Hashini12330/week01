@@ -11,6 +11,10 @@ public class Main {
         array arr = new array();
         arr.printArray();
 
+        // set size of 2D array
+        setSize size = new setSize();
+        size.setArray();
+
 
     }
 }
@@ -35,6 +39,39 @@ class array{
                 System.out.println("Item" + (item + 1) + ": " + PlayerInv[i][item]);
             }
         }
+    }
+
+}
+
+
+
+// set size of 2D array
+class setSize{
+    int[][] num = new int[3][4]; // row size = 3, column size = 4
+
+
+    public void setArray(){
+        num[0][0] = 4;  
+        num[1][2] = 5;
+        num[2][3] = 6;
+
+        /*              Column
+                    0    1    2    3
+                +----+----+----+----+
+        Row 0    |    |    |    |    |
+                +----+----+----+----+
+        Row 1    |    |    |    |    |
+                +----+----+----+----+
+        Row 2    |    |    |    |    |
+                +----+----+----+----+         */
+
+    
+        System.out.println("Row size: " + num.length); // row size
+        System.out.println("Column size: " + num[0].length); // column size
+
+        // print 2D array
+        System.out.println("Print elements: " + num[0][0]);
+
     }
 
 }
